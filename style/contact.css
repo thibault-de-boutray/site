@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #fef1df;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+
+main form {
+    margin-top: 115px;
+    transform: scale(1.2);
+    background-color: rgb(250, 250, 250);
+    padding: 68.75px;
+    border-radius: 18.75px;
+    box-shadow: 10.5px 6.25px 6.25px rgb(209, 204, 204,0.8);
+    font-size: 20px;
+}
+
+main form h1 {
+    font-size: 37.5px;
+}
+
+main form .separation {
+    width: 100%;
+    height: 2px;
+    background-color: #747cdf;
+}
+
+main form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 43.75px;
+}
+
+main form .corps-formulaire .boite {
+    position: relative;
+    margin-top: 27.5px;
+    display: flex;
+    flex-direction: column;
+}
+main form .corps-formulaire .gauche{
+    margin-top: 4px;
+}
+main form .corps-formulaire .gauche .boite input {
+    margin-top: 7.5px;
+    padding: 12.5px 10.25px 12.5px 37.5px;
+    border: 1.25px solid #c9c9c9;
+    border-radius: 5px;
+    outline-color: #747cdf;
+}
+
+main form .corps-formulaire .gauche .boite i {
+    position: absolute;
+    left: 0;
+    top: 29px;
+    padding: 12.5px 10px;
+    color: #747cdf;
+}
+
+main form .corps-formulaire .droite {
+    margin-left: 50px;
+}
+
+main form .corps-formulaire .droite .boite {
+    height: 125%;
+}
+
+main form .corps-formulaire .droite .boite textarea {
+    margin-top: 6.25px;
+    padding: 12.5px;
+    background-color: white;
+    outline: none;
+    border: solid 2.5px #747cdf;
+    border-radius: 6.25px;
+    resize: none;
+    height: 44.5%;
+    margin-bottom: 10px;
+}
+main form .corps-formulaire .droite .boite .file{
+    display: none;
+}
+main form .corps-formulaire .droite .boite .label-file{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: #747cdf;
+    width: 40%;
+    padding: 10px 0px;
+    margin:0 auto;
+    border-radius: 20PX;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+main form .corps-formulaire .droite .boite .label-file:hover{
+    animation: scale 0.7s infinite ease;
+}
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+main form .corps-formulaire .droite .boite .label-file:active{
+    background-color: rgb(211, 211, 211);
+    border: 1px solid #747cdf;
+}
+
+
+main form .pied-formulaire button {
+    margin-top: 12.5px;
+    background-color: #747cdf;
+    color: white;
+    font-size: 18.75px;
+    border: none;
+    padding: 12.5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+main form .pied-formulaire button:hover {
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 800px) {
+    main form .corps-formulaire .droite {
+        margin-left: 0px;
+    }
+}

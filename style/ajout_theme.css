@@ -1,0 +1,351 @@
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #fef1df;
+    overflow-x: hidden;
+}
+main{
+    width: 100vw;
+    height: 91.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 58%;
+    height: 90%;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 10.5px 6.25px 6.25px rgb(209, 204, 204,0.8);
+    position: relative;
+}
+
+
+form .fa-circle-left{
+    display: none;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 4rem;
+    color: #747cdf;
+    display: block;
+    top: 2rem;
+    left: 1.5rem;
+    cursor: pointer;
+}
+form .fa-circle-left:hover{
+    animation: scale 0.9s infinite ease;
+}
+form .fa-circle-left:active{
+    border: 1px solid #747cdf;
+    background-color: #747cdf;
+    color: white;
+}
+
+form .gauche-avant {
+    border-radius: 2rem 0 0 2rem;
+    width: 35%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, width 0.5s, height 0.5s;
+}
+form .gauche-avant-transition{
+    width: 65%;
+    background-color: #747cdf;  
+}
+form .gauche-avant img{
+    width: 75%;
+}
+form .droite-avant{
+    background-color: #747cdf;
+    border-radius: 0 2rem 2rem 0;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    transition: background-color 0.5s, width 0.5s, height 0.5s;
+}
+
+form .droite-avant-transition{
+    background-color: white;
+    border-radius: 0 2rem 2rem 0;
+    width: 35%;
+}
+
+form .droite-avant .container{
+    padding: 2.7rem;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+form .droite-avant .container h1{
+    width: 100%;
+    font-size: 2.8rem;
+}
+
+form .droite-avant .container .separateur{
+    width: 100%;
+    align-self: flex-start;
+    background-color: #747cdf;
+    height: 0.4rem;
+    border-radius: 5px;
+    margin-bottom: 2.8rem;
+}
+
+form .droite-avant .container .content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 2rem;
+}
+
+form .droite-avant .container .content input{
+    width: 60%;
+    outline-color:#747cdf ;
+    border: 1px solid grey;
+    padding: 0.6rem 1rem 0.6rem 1.4rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+form .droite-avant .container .content #attention_nom,#attention_area,#attention_image{
+    color: red;
+    font-size: 1rem;
+    display: none;
+    text-align: center;
+}
+form .droite-avant .container .content #attention_nom i,#attention_image i,#existe i,#valide i{
+    margin-left: 0.4rem;
+}
+form .droite-avant .container #existe,#valide{
+    margin-top: 1rem;
+    color: red;
+    display: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+form .droite-avant .container #valide{
+    color: green;
+    font-size: 1.4rem;
+}
+
+form .droite-avant .container .content #attention_image{
+    margin-top: 0.6rem;
+}
+
+form .droite-avant .container .content .label-logo{
+    margin-top: 1.5rem;
+}
+form .droite-avant .container .content .logo{
+    width: 50%;
+    text-align: center;
+    padding: 0.4rem 2rem;
+    border-radius: 15px;
+    background-color: white;
+    color: grey;
+    border: 1px solid grey;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+form .droite-avant .container .content .logo:hover{
+    animation: scale 0.9s infinite linear;
+}
+
+form .droite-avant .container .content .logo:active{
+    background-color: white;
+    color: #747cdf;
+    border: 1px solid #747cdf;
+}
+
+form .droite-avant .container .content #filea{
+    color: green;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    font-size: 1.2REM;
+    display: none;
+}
+
+form .droite-avant .container .continuer{
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    width: 70%;
+    background-color: #747cdf;
+    border-radius: 20px;
+    color: white;
+    border: none;
+}
+
+form .droite-avant .container .continuer:hover{
+    animation: scale 0.9s infinite linear;
+    display: flex;
+    align-items: center;
+}
+
+form .droite-avant .container .continuer:active {
+    background-color: white;
+    color: #747cdf;
+    border: 1.5px solid #747cdf;
+}
+
+form .droite-avant .container .continuer i{
+    display: none;
+    margin-left: 0.5rem;
+    
+}
+
+form .droite-avant .container .continuer:hover i{
+    display: block;
+}
+
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.06);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+form .droite-avant .container .content #logo{
+    display: none;
+}
+
+
+form .gauche-apres{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2rem 0 0 2rem;
+    width: 65%;
+    background-color: #747cdf;
+    transition: background-color 0.5s, width 0.5s, height 0.5s;
+}
+
+form .droite-apres{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 2rem 2rem 0;
+    background-color: white;
+    width: 35%;
+    height: 100%;
+    transition: background-color 0.5s, width 0.5s, height 0.5s;
+}
+form .droite-apres h1{
+    color: white;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+
+form .droite-apres .image-container {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: white 3px solid;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+form .droite-apres .image-round {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+form .animation-gauche{
+    background-color: white;
+    border-radius: none;
+    width: 45%;
+    
+}
+
+form .animation-droite{
+    background-color: #747cdf;
+    border-radius: none;
+    width: 65%;
+}
+
+form .gauche-apres .container{
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    padding: 4rem;
+    font-weight: 700;
+}
+form .gauche-apres .container h1{
+    font-size: 2.8rem;
+    margin-left: 1rem;
+}
+
+form .gauche-apres .container .separateur{
+    width: 78%;
+    align-self: flex-start;
+    background-color: #747cdf;
+    height: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+}
+
+
+form .gauche-apres label{
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+form .gauche-apres textarea{
+    width: 90%;
+    height: 55%;
+    outline-color:#747cdf ;
+    border: 2px solid gray;
+    padding: 1rem;
+    resize: none;
+    font-size: 0.8rem;
+    border-radius:10px ;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 3rem;
+}
+
+form .gauche-apres .valider{
+    cursor: pointer;
+    width: 70%;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    background-color: #747cdf;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+form .gauche-apres .valider:hover{
+    animation: scale 0.9s infinite ease;
+}
+
+
+form .gauche-apres .valider:active{
+    background-color: white;
+    color: #747cdf;
+    border: 1.5px solid #747cdf;
+}
+

@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    background-color: #fef1df;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    font-family: "roboto",sans-serif;
+    width: 100%;
+    height: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content{
+    width: 65%;
+    height: 90%;
+    box-shadow: 8.5px 4.25px 6.25px rgb(209, 204, 204,0.8);
+    border-radius: 2%;
+    background-color: white;
+    display: flex;
+}
+
+
+main .content .gauche{
+    width: 35%;
+    height: 100%;
+    background-color: rgb(228, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+main .content .gauche .partie-haut{
+    margin-top: 15%;
+    margin-bottom: 30%;
+    color: #6c5ce7;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+main .content .gauche .partie-bas{
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+main .content .gauche .partie-bas .etape{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: start;
+}
+main .content .gauche .partie-bas #span1,#span2,#span3{
+    position: relative;
+    padding: 10px 17px;
+    border: 3px solid rgb(192, 192, 192);
+    margin-right: 12%;
+    font-size: 23px;
+    background-color: rgb(192, 192, 192);
+    color: rgb(77, 77, 77);
+    border-radius: 50%;
+    transition: background-color 0.2s linear,border-color 0.2s linear,color 0.2s linear;
+}
+main .content .gauche .partie-bas #span1{
+    background-color: #6c5ce7;
+    border-color: #b8affe;
+    color: white;
+}
+
+
+main .content .partie-bas #span1:hover,main .content .partie-bas #span3:hover{
+    cursor: pointer;
+    border-color: #b8affe;
+    background-color: #6c5ce7;
+    color: white;
+}
+main .content .partie-bas #span2:hover{
+    cursor: pointer;
+    border-color: #b8affe;
+    background-color: #6c5ce7;
+    color: white;
+}
+
+main .content .gauche .partie-bas #span1::before,main .content .gauche .partie-bas #span2::before{
+    position: absolute;
+    content: "";
+    background-color: rgb(192, 192, 192);
+    width: 3px;
+    height: 195%;
+    top: 100%;
+    left: 50%;
+}
+
+
+#span1:active,#span2:active,#span3:active{
+    animation: nouveau 0.5s linear;
+}
+.reculer_rond{
+    animation: ancier 0.5s linear;
+}
+@keyframes nouveau {
+    100%{
+        border-color: #b8affe;
+        background-color: #b8affe;
+        color: white;
+    }
+}
+
+
+@keyframes ancien {
+    100%{
+        border-color: rgb(192, 192, 192);
+        background-color: rgb(192, 192, 192);
+        color: rgb(77, 77, 77);
+    }
+}
+
+
+
+
+main .content .gauche .partie-bas .etape h2{
+    font-weight: 100;
+    color: rgb(80, 80, 80);
+    font-size: 18px;
+}
+main .content .partie-bas .texte p{
+    margin-top: 10%;
+    color: rgb(159, 159, 159);
+}
+main .content .droite{
+    position: relative;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .content .droite .fa-left-long{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 900;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: #6c5ce7;
+    padding: 10px;
+    display: none;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+main .content .droite .fa-left-long:hover{
+    animation: scale 0.7s ease infinite;
+}
+main .content .droite .fa-left-long:active{
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+    background-color: white;
+    padding: 8px;
+}
+
+main .content .droite .premiere{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .content .droite .premiere .haut{
+    text-align: center;
+    width: 100%;
+    font-size: 23px;
+    text-decoration: underline;
+    color: rgb(136, 135, 135);
+}
+main .content .droite .premiere .selector{
+    width: 100%;
+    margin-top: 5%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+main .content .premiere .choisir{
+    margin: auto;
+    position: relative;
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
+    border: 2px solid rgb(202, 198, 198);
+    display: flex;
+    color: rgb(136, 135, 135);
+    padding: 2px 20px 2px 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+main .content .premiere .choisir:hover{
+    border-color: #6c5ce7;
+    color: #6c5ce7;
+    border-radius: 20px 20px 0 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.image-container {
+    margin-left: 2%;
+    width: 9%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    border: white 3px solid;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.image-round {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .content .droite .premiere .selector span{
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 5%;
+}
+
+main .content .droite .premiere .selector .choisir .fa-chevron-down{
+    position: absolute;
+    top: 25%;
+    color: rgb(202, 198, 198);
+    right: 5%;
+    font-size: 30px;
+    color: rgb(202, 198, 198);
+}
+main .content .droite .premiere .selector .choisir:hover .fa-chevron-down{
+    color: #6c5ce7;
+}
+
+main .content .droite .premiere .selector .choisir #liste_choix{
+    position: absolute;
+    width: 100%;
+    display: none;
+    max-height: 500%;
+    overflow-y: hidden;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    color: rgb(136, 135, 135);
+}
+
+
+main .content .droite .premiere .selector .choisir #liste_choix .choix{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 2px 20px 2px 5px;
+    border: 2px solid grey;
+}
+#liste_choix .choix:last-of-type{
+    border-radius: 0 0 20px 20px;   
+}
+main .content .droite .premiere .selector .choisir #liste_choix .choix:hover{
+    background-color: #6c5ce7;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+main .premiere .affichage{
+    width: 90%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    box-shadow: 8.5px 4.25px 6.25px rgb(209, 204, 204,0.8);
+    border: rgb(239, 235, 235) 2px solid;
+}
+main .premiere .affichage .partie_haut{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+}
+
+main .premiere .affichage .image-container{
+    min-width: 60px;
+    max-height: 60px;
+}
+
+main .premiere .affichage .description_affichage{
+    width: 80%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 8.5px 4.25px 6.25px rgb(209, 204, 204,0.8);
+    height: 55%;
+    font-size: 20px;
+    background-color: rgb(243, 241, 241);
+}
+
+.bouton_suivant{
+    font-size: 40px;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #6c5ce7;
+    color: white;
+    border: 4px solid #6c5ce7;
+    margin-top: 3%;
+}
+.bouton_suivant:hover{
+    animation: scale 0.6s ease infinite;
+}
+.bouton_suivant:active{
+    border-color: #6c5ce7;
+    background-color: white;
+    color: #6c5ce7;
+}
+
+.bouton_suivant i{
+    display: none;
+}
+.bouton_suivant:hover i{
+    display: inline;
+}
+
+@keyframes scale {
+    0%,100%{
+        transform: scale(1.0);
+    }
+    25%,75%{
+        transform: scale(1.03);
+    }
+    50%{
+        transform: scale(1.03);
+    }
+}
+
+main .seconde{
+    width: 90%;
+    height: 95%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .seconde .haut{
+    margin-top: 5%;
+    width: 100%;
+    font-size: 22px;
+    color: rgb(136, 135, 135);
+    text-decoration: underline;
+    text-align: center;
+}
+main .seconde .principal{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    width:70%;
+    padding: 40px 10px 10px 10px;
+    border-radius: 20px;
+    height:50%;
+    background-color: white;
+    display: flex;
+    border: 2px solid rgb(215, 213, 213);
+    box-shadow: 8.5px 4.25px 6.25px rgb(209, 204, 204,0.8);
+    flex-direction: column;
+}
+main .seconde label{
+    font-size: 23px;
+    margin-right: 10px;
+    text-decoration: underline;
+    color: rgb(159, 159, 159);
+}
+
+.seconde .principal .date{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2.5%;
+    margin-right: 10px;
+}
+
+.seconde .principal .date input{
+    width:45%;
+    height: 80%;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    outline-color: #6c5ce7;
+    cursor: pointer;
+}
+
+
+.seconde .principal .horaire,main .principal .duree{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2.5%;
+}
+.seconde .principal .horaire input,main .principal .duree input{
+    font-size: 30px;
+    padding-left: 10px;
+    width: 27%;
+    outline-color: #6c5ce7;
+    text-align: center;
+    color: grey;
+    border-radius: 20px;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+
+main .principal .nombre_place{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30px;
+}
+
+main .principal .nombre_place i{
+    font-size: 40px;
+    margin: 0 15px;
+    color: grey;
+    border: grey 1px solid;
+    padding: 5px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+main .principal .nombre_place i:hover{
+    animation:scale 0.6s ease infinite;
+}
+main .principal .nombre_place i:active{
+    border-color: #6c5ce7;
+    color: #6c5ce7;
+}
+
+
+main .principal .nombre_place span{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    width: 10%;
+}
+
+main .derniere{
+    display: none;
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    align-items: CENTER;
+}
+main .derniere .haut{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: rgb(136, 135, 135);
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration: underline;
+}
+
+.derniere .image-container{
+    width: 50px;
+    height: 50px;
+}
+
+main .derniere .principal{
+    box-shadow: 8.5px 4.25px 6.25px rgb(209, 204, 204,0.8);
+    width: 90%;
+    height: 70%;
+    border-radius: 20PX;
+    background-color: #747cdf;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.derniere .principal .theme,.derniere .caracteristique{
+    border-radius: 20px;
+    width: 42%;
+    height: 85%;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.derniere .principal .theme h2,.caracteristique h2{
+    text-decoration: underline;
+    margin-bottom: 10px;
+    color: rgb(136, 135, 135);
+}
+
+
+
+.derniere .principal .theme .nom_verif{
+    word-wrap: break-word;
+    max-height: 40%;    
+    width: 95%;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.derniere .principal .theme .nom_verif,.derniere .principal .logo_verif p,.derniere .principal .caracteristique .contenue p{
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: gray;
+}
+.derniere .principal .logo_verif{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 20%;
+    margin-bottom: 10px;
+}
+.derniere .principal .description_verif{
+    width: 85%;
+    padding: 4%;
+    border-radius: 20px;
+    height: 40%;
+
+    background-color: rgb(246, 244, 244);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.derniere .principal .caracteristique .contenue{
+    margin-top: 40px;
+    width: 85%;
+    padding: 16px;
+    height: 65%;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    background-color: rgb(247, 246, 246);
+}
+.derniere .principal .caracteristique .contenue img{
+    width: 65%;
+    height: 40%;
+}
+.derniere .principal .caracteristique .contenue p{
+    margin-bottom: 10px;
+}
+.derniere .principal .caracteristique .contenue .image_contenue{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+}
+.derniere .principal span{
+    color: black;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+
+
+

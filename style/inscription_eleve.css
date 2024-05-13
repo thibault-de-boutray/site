@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: #fef1df;
+}
+
+main{
+    width: 98vw;
+    height: 91.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main .calendrier{
+    transform: scale(1.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 700px;
+    width: 1400px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px 5px rgb(176, 176, 176);
+    border-radius: 20px;
+    
+    
+}
+main .gauche,
+main .droite {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .gauche{
+    background-color: rgb(242, 241, 241);
+    height: 100%;
+    width: 65%;
+    border-right: 2px solid rgb(55, 55, 55,0.6);
+    color: rgb(95, 91, 91);
+}
+
+main .gauche .mois{
+    height: 10%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-bottom: 4px solid #747cdf;
+    padding: 10px 0 10px 0;
+}
+
+main .calendrier .gauche .fa-chevron-left,
+main .calendrier .gauche .fa-chevron-right{
+    transition: transform 0.5s ease;
+    padding: 10px 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+main .calendrier .gauche .fa-chevron-left:hover,
+main .calendrier .gauche .fa-chevron-right:hover{
+    color: #747cdf;
+    transform: scale(1.06);
+}
+
+main .calendrier .gauche .fa-chevron-left:active,
+main .calendrier .gauche .fa-chevron-right:active{
+    border: 2px solid rgb(159, 158, 158);
+    background-color: rgb(235, 232, 232);
+}
+main .calendrier .horaire-container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .calendrier .gauche .jours{
+    display: flex;
+    align-items: flex-end;
+    margin: 20px 0px;
+    font-size: 20px;
+
+}
+main .calendrier .gauche .jours .fa-chevron-left,
+main .calendrier .gauche .jours .fa-chevron-right{
+    border: 2px solid rgb(242, 241, 241);
+    align-self: center;
+}
+main .calendrier .gauche .fa-chevron-left{
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+main .calendrier .gauche .fa-chevron-right{
+    margin-left: 20px;
+}
+main .calendrier .gauche .jours .differents-jours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    border-bottom: solid 3px #747cdf;
+
+}
+main .calendrier .numero{
+    margin-bottom: 6px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: rgb(242, 241, 241);
+    border-radius: 100%;
+}
+main .calendrier .gauche .numero:hover{
+    background-color: #747cdf;
+    color: white !important;
+}
+.planning{
+    align-self: start;
+    margin-left: 30px;
+}
+.planning #planningTable{
+    border-collapse: collapse;
+    border: none;
+    box-shadow: 8px 5px 5px #747cdf;
+}
+.planning tbody tr {
+    height: 40px;
+}
+.planning .each-hour{
+    width: 100px;
+}
+.planning tr{
+    border-right: 1px solid black;
+}
+
+.planning td {
+    width: 88px;
+    position: relative;
+    text-align: center;
+    border-right: 2px solid black;
+    border-bottom:1px dashed black ;
+}
+.planning tr:last-child td{
+    border-bottom:none;
+}
+.planning tr td:last-child {
+    border-right: none;
+}
+.planning td .seance{
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: #747cdf;
+    color: white;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+main .droite{
+    background-color: #747cdf;
+    width: 35%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(95, 91, 93);
+    padding: 15px;
+}
+main .droite .bouton-quitter{
+    align-self: flex-end;
+}
+
+main .droite .bouton-quitter button {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    padding: 0px 8px;
+    border: none;
+    font-size: 35px;
+    border-radius: 100%;
+    background-color: rgb(230, 226, 226);
+    color: #747cdf;
+    cursor: pointer;
+}
+
+main .droite .bouton-quitter button:hover {
+    animation: scale 0.7s infinite ease;
+}
+
+main .droite .bouton-quitter button:active {
+    background-color: #747cdf;
+    color: white;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.06);
+    }
+}
+
+main .droite .inscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    padding:20px 30px;
+    border-radius: 20px;
+    width: 70%;
+    height: 90%;
+    box-shadow: 3.5px 4.25px 4.25px rgba(255,255,255, 0.4);
+}
+
+
+main .droite .inscription .contenue{
+    width: 95%;
+    height: 45%;
+    margin-bottom: 20px;
+    background-color: rgb(239, 242, 244);
+    border: 2px ridge rgb(213, 212, 212);
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+main .droite .inscription .contenue .main-containt{
+    margin: 20px 0;
+}
+
+main .droite .inscription .partie-haut{
+    height: 30%;
+    margin-bottom: 2%;
+}
+
+main .droite .inscription .partie-haut .titre{
+    margin-top: 6%;
+}
+
+
+main .droite .inscription .contenue .main-containt .element{
+    margin-bottom: 10px;
+}
+main .droite .inscription .contenue .main-containt .label{
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-right: 10px;
+    font-weight: 600;
+}
+main .droite .inscription .contenue .main-containt .jour ,
+main .droite .inscription .contenue .main-containt .horaire{
+    display: flex;
+    align-items:baseline;
+}
+
+main .droite .inscription .contenue .main-containt .jour .date ,
+main .droite .inscription .contenue .main-containt .horaire .heure{
+    font-size: 18px;
+    font-family: "roboto",sans-serif;
+    font-weight: 400;
+}
+main .droite .inscription .contenue .main-containt .horaire .heure{
+    display: flex;
+    align-items: baseline;
+}
+main .droite .inscription .contenue .main-containt .le_theme{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: azure;
+    max-width: 67%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+}
+
+main .droite .inscription .contenue .main-containt .le_theme .nom{
+    font-weight: 800;
+    font-size: 20px;   
+}
+
+main .droite .inscription .contenue .main-containt .horaire .heure input{
+    width: 100px;
+    height: 23px;
+    border: none;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: "roboto",sans-serif;
+    font-weight:400 ;
+    color: rgb(95, 91, 93);
+    background-color: rgb(239, 242, 244);
+    outline: none;
+}
+main .droite .inscription .contenue .progress{
+    margin-top: 5px;
+    width: 100%;
+    height: 20px;
+    border:3px solid #747cdf;
+    position: relative;
+    border-radius: 20px;
+    padding: 1px 2px ;
+    display: flex;
+}
+
+main .droite .inscription .contenue .progress .place{
+    height: 20px;
+    border-right: 3px grey solid;
+    background-color: green;
+}
+main .droite .inscription .contenue .progress .place:last-child{
+    border-radius: 0 20px 20px 0px;
+}
+
+main .droite .inscription .contenue .progress .place:nth-child(2){
+    border-radius: 20px 0 0 20px ;
+}
+
+main .droite .inscription .contenue .progress:hover {
+    animation: rotation 2s infinite ease-in-out;
+}
+
+@keyframes rotation {
+    0%,50%,75% {
+        transform: rotate(0.7deg);
+    }
+    25%,100%{
+        transform: rotate(-0.7deg);
+    }
+}
+
+
+
+
+main .droite .inscription .contenue .progress:hover .icone{
+    display: block;
+}
+main .droite .inscription .contenue .progress .icone{
+    position: absolute;
+    display: none;
+    top: -50px;
+    right: -32px;
+}
+main .droite .inscription .contenue .progress .fa-message{
+    position: relative;
+    font-size:50px ;
+    color: #747cdf;
+}
+main .droite .inscription .contenue .progress .nombre-personne{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+
+main .droite .inscription .contenue .theme-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+main .droite .inscription .contenue .theme-container .image-container{
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+    overflow: hidden;
+    border: white 3px solid;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+main .droite .inscription .contenue .theme-container .image-container .image-round {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+main .droite .inscription .partie-bas{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    width: 95%;
+    background-color: rgb(239, 242, 244);
+    border: 2px ridge rgb(213, 212, 212);
+    border-radius: 20px;
+}
+main .droite .inscription .partie-bas .input{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin: 50%;
+}
+main .droite .inscription .separation{
+    background-color: #747cdf;
+    width: 60%;
+    height: 3px;
+}
+
+main .droite .inscription .partie-bas .input{
+    margin: 20px 0;
+}
+main .droite .inscription .partie-bas .input label{
+    font-size: 20px;
+    font-weight: 600;
+}
+main .droite .inscription .partie-bas .input input{
+    margin-top: 5px;
+    padding: 8px 15px;
+    outline-color:#747cdf ;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+}
+
+main .droite .inscription .submit {
+    margin-top: 12.5px;
+    background-color: #747cdf;
+    color: white;
+    font-family: "roboto",sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    padding: 10px 45px ;
+    border-radius: 8.25px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+main .droite .inscription .submit:hover {
+    transform: scale(1.05);
+}
+
